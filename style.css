@@ -30,6 +30,9 @@ main {
 /* Footer styles moved from inline to here */
 .site-footer {
   flex-shrink: 0;             /* don't let footer shrink */
+  display: flex;             /* center contents */
+  justify-content: center;   /* horizontally center */
+  align-items: center;       /* vertically center if footer has height */
   text-align: center;
   margin: 20px 0;
   padding: 0.5rem 1rem;
