@@ -1,76 +1,54 @@
+/* Basic reset and page layout to keep footer at the bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
-    background: #161a30;
-    color: #f0ece5;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #fff;
+  color: #111;
 }
-header {
-    background: #31304d;
-    padding: 32px 0 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 8px #0004;
-}
-header h1 {
-    font-size: 2.6rem;
-    margin: 0 0 10px 0;
-    letter-spacing: 2px;
-}
-header p {
-    font-size: 1.2rem;
-    margin: 0;
-    color: #b6bbc4;
-}
+
+/* Make main area grow so footer stays at bottom */
 main {
-    margin: 40px auto 30px auto;
-    max-width: 900px;
-    padding: 0 20px;
+  flex: 1 0 auto;
+  padding: 1rem;
 }
+
+/* Repo list/card basic styling (optional, keep if you already have it) */
 .repo-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 28px;
-    justify-content: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding: 1rem;
 }
-.repo-card {
-    display: block;
-    background: #232946;
-    color: #f0ece5;
-    padding: 28px 22px 20px 22px;
-    border-radius: 18px;
-    width: 270px;
-    box-shadow: 0 4px 18px #0002;
-    text-decoration: none;
-    transition: transform 0.12s, box-shadow 0.15s, background 0.2s;
-    border: 2px solid #393e60;
-    position: relative;
+
+/* Footer styles moved from inline to here */
+.site-footer {
+  flex-shrink: 0;             /* don't let footer shrink */
+  text-align: center;
+  margin: 20px 0;
+  padding: 0.5rem 1rem;
+  background: transparent;    /* change if you want a footer background */
 }
-.repo-card:hover {
-    background: #393e60;
-    color: #fff685;
-    transform: translateY(-7px) scale(1.03);
-    box-shadow: 0 8px 24px #0005;
-    border-color: #fff685;
-    z-index: 1;
+
+/* Badge image sizing and accessibility-friendly display */
+.site-footer img {
+  width: 88px;
+  height: 31px;
+  border: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
-.repo-card h2 {
-    font-size: 1.3rem;
-    margin: 0 0 10px 0;
-    letter-spacing: 1px;
-}
-.repo-card p {
-    font-size: 1rem;
-    margin: 0;
-    color: #b6bbc4;
-}
-@media (max-width: 600px) {
-    .repo-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
-    }
-    .repo-card {
-        width: 100%;
-        box-sizing: border-box;
-    }
+
+/* Small-screen tweak */
+@media (max-width: 360px) {
+  .site-footer img {
+    width: 72px;
+    height: 25px;
+  }
 }
