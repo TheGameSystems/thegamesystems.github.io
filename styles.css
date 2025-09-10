@@ -15,9 +15,10 @@ body {
 
 /* Make main area grow so footer stays at bottom */
 main {
-  flex: 1 0 auto;
+  flex: 1; /* Changed from 1 0 auto to 1 */
   padding: 1rem;
 }
+
 
 /* Repo list/card basic styling (optional, keep if you already have it) */
 .repo-list {
