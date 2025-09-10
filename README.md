@@ -2,4 +2,4 @@
 
 Welcome. This is my homepage showing off repositories I made, and repositories I made with my friends.
 
-Note: The majority of the website was generated with GitHub Copilot
+There was originally a modern style, but the .css refuses to apply to the .html
