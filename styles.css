@@ -19,11 +19,9 @@ main {
   padding: 1rem;
 }
 
-
 /* Repo list/card basic styling (optional, keep if you already have it) */
 .repo-list {
   display: grid;
-  gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   padding: 1rem;
 }
