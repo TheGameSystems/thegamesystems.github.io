@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f8f9fa;   /* Light mode background */
+  background: #f8f9fa;   /* Default (light mode) */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,22 +49,22 @@ h1 {
   transform: scale(0.98);
 }
 
-/* 🌙 Dark Mode */
+/* 🌙 Force Dark Mode Styling */
 @media (prefers-color-scheme: dark) {
   body {
-    background: #121212;  /* Dark mode background */
-    color: #eee;
+    background: #121212 !important;  /* Force dark background */
+    color: #eee !important;
   }
 
   .btn {
-    background-color: #3399ff;
+    background-color: #3399ff !important;
   }
 
   .btn:hover {
-    background-color: #1a73e8;
+    background-color: #1a73e8 !important;
   }
 
   .btn:active {
-    background-color: #0d47a1;
+    background-color: #0d47a1 !important;
   }
 }
